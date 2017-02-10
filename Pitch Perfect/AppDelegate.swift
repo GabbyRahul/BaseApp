@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let mainViewController   = ManualSegueViewController()
+        let drawerViewController = DrawerViewController()
+        let drawerController     = KYDrawerController(drawerDirection: .left, drawerWidth: 300)
+        drawerController.mainViewController = UINavigationController(
+            rootViewController: mainViewController
+        )
+        drawerController.drawerViewController = drawerViewController
+        
+        /* Customize
+         drawerController.drawerDirection = .Right
+         drawerController.drawerWidth     = 200
+         */
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = drawerController
+        window?.makeKeyAndVisible()
+        
+        
         return true
     }
 

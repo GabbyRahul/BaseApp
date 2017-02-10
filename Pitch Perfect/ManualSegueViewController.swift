@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class ManualSegueViewController: UIViewController {
 
@@ -14,12 +15,49 @@ class ManualSegueViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.navigationItem.title = "Pitch Perfect"
+        
+        // change navigationbar color
+        self.navigationController?.navigationBar.barTintColor = UIColor.cyan
+        
+
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Open",
+            style: UIBarButtonItemStyle.plain,
+            target: self,
+            action: #selector(didTapOpenButton)
+        )
+        
+     //   performSegue(withIdentifier: "record", sender: nil)
+
+    }
+    
+    func didTapOpenButton(_ sender: UIBarButtonItem) {
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+            drawerController.setDrawerState(.opened, animated: true)
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear Called")
+        self.navigationItem.title = "Pitch Perfect"
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        navigationItem.title = nil
+        if segue.identifier == "record" {
+            segue.destination as! RecordSoundsViewController
+        }
+    }
+
     
 
     /*

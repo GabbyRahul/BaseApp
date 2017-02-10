@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import Alamofire
+import KYDrawerController
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
@@ -20,14 +21,25 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     var audioRecorder : AVAudioRecorder!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        stopButton.isEnabled = false
+//        view.backgroundColor = UIColor.white
+//        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Open",
+            style: UIBarButtonItemStyle.plain,
+            target: self,
+            action: #selector(didTapOpenButton)
+        )
+        
+        //stopButton.isEnabled = false
         self.navigationItem.title = "Pitch Perfect"
         
         // change navigationbar color
         self.navigationController?.navigationBar.barTintColor = UIColor.cyan
+        
         
         let user = "sbi_rupee"
         let pass = "sbi_rupee"
@@ -54,6 +66,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             debugPrint(response)
         }
         
+       // sleep(3)
+        //performSegue(withIdentifier: "manuals", sender: nil)
+        
+    }
+    
+    func didTapOpenButton(_ sender: UIBarButtonItem) {
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+            drawerController.setDrawerState(.opened, animated: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -110,12 +131,17 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         navigationItem.title = nil
+        if segue.identifier == "manuals" {
+            segue.destination as! PlaySoundsViewController
+            
+        }
         if segue.identifier == "stopRecording" {
             let playSoundsVC = segue.destination as! PlaySoundsViewController
             let recordedAudioURL = sender as! URL
             playSoundsVC.recordedAudioURL = recordedAudioURL
         }
     }
+
     
     
 }

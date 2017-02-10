@@ -9,5 +9,6 @@ target 'Pitch Perfect' do
 
   # Pods for Pitch Perfect
     pod 'Alamofire', '~> 4.3'
+    pod 'KYDrawerController'
 
 end

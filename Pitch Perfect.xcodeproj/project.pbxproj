@@ -19,6 +19,7 @@
 		A940154D1E44709F003E73AE /* HeloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A940154C1E44709F003E73AE /* HeloViewController.swift */; };
 		A94015531E4AF13B003E73AE /* GroupedRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94015521E4AF13B003E73AE /* GroupedRadioButton.swift */; };
 		A9B2A0AA1E43394100B617A8 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B2A0A91E43394100B617A8 /* PlaySoundsViewController.swift */; };
+		A9B7C13F1E4DCF3E00756627 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B7C13E1E4DCF3E00756627 /* DrawerViewController.swift */; };
 		A9ED4FCC1E42F35F0046DCC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9ED4FCA1E42F35F0046DCC5 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		A940154C1E44709F003E73AE /* HeloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeloViewController.swift; sourceTree = "<group>"; };
 		A94015521E4AF13B003E73AE /* GroupedRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedRadioButton.swift; sourceTree = "<group>"; };
 		A9B2A0A91E43394100B617A8 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		A9B7C13E1E4DCF3E00756627 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		A9ED4FCB1E42F35F0046DCC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D33D285CBA0EE18889ED92B8 /* Pods-Pitch Perfect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pitch Perfect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pitch Perfect/Pods-Pitch Perfect.debug.xcconfig"; sourceTree = "<group>"; };
 		F95CF42FCA518B52EAE9F870 /* Pods_Pitch_Perfect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pitch_Perfect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 				A940154C1E44709F003E73AE /* HeloViewController.swift */,
 				A94015521E4AF13B003E73AE /* GroupedRadioButton.swift */,
 				A904F98A1E4D7F9700421C40 /* ManualSegueViewController.swift */,
+				A9B7C13E1E4DCF3E00756627 /* DrawerViewController.swift */,
 			);
 			path = "Pitch Perfect";
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				A904F98B1E4D7F9700421C40 /* ManualSegueViewController.swift in Sources */,
 				A94015531E4AF13B003E73AE /* GroupedRadioButton.swift in Sources */,
 				A940154D1E44709F003E73AE /* HeloViewController.swift in Sources */,
+				A9B7C13F1E4DCF3E00756627 /* DrawerViewController.swift in Sources */,
 				A91E7DC71E41C3D800D193F3 /* AppDelegate.swift in Sources */,
 				A94015431E4366FB003E73AE /* SlowViewController.swift in Sources */,
 			);

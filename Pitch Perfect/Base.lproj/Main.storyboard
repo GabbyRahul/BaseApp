@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="abw-xE-N8G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Q6i-35-iKv">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pitch Perfect-->
+        <!--RecordSoundsViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="RecordSoundsViewController" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -47,7 +47,7 @@
                         <constraints>
                             <constraint firstItem="Cya-BX-7e8" firstAttribute="centerX" secondItem="Cx1-ID-UBt" secondAttribute="centerX" id="33e-to-Mrj"/>
                             <constraint firstItem="Orr-pD-UgA" firstAttribute="top" secondItem="Cx1-ID-UBt" secondAttribute="bottom" constant="8" symbolic="YES" id="7LN-F0-Fdp"/>
-                            <constraint firstItem="Cya-BX-7e8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="146" id="9wm-uc-ZGB"/>
+                            <constraint firstItem="Cya-BX-7e8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="146" id="7ai-lw-fmG"/>
                             <constraint firstItem="Cya-BX-7e8" firstAttribute="leading" secondItem="Orr-pD-UgA" secondAttribute="leading" id="DQf-Vr-1KP"/>
                             <constraint firstItem="Cya-BX-7e8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W1B-Di-QrN"/>
                             <constraint firstItem="Cx1-ID-UBt" firstAttribute="top" secondItem="Cya-BX-7e8" secondAttribute="bottom" constant="8" id="hh7-hS-l7v"/>
@@ -73,11 +73,12 @@
                         <outlet property="stopButton" destination="Orr-pD-UgA" id="CdC-sa-J1Z"/>
                         <outlet property="tapToRecord" destination="Cx1-ID-UBt" id="xTC-Bg-CNS"/>
                         <segue destination="3BX-Hd-IqW" kind="show" identifier="stopRecording" id="xva-D1-DGI"/>
+                        <segue destination="3BX-Hd-IqW" kind="show" identifier="manuals" id="Ql5-uP-GT4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="669.375" y="-573.5915492957746"/>
+            <point key="canvasLocation" x="758" y="-1227"/>
         </scene>
         <!--Play Sounds View Controller-->
         <scene sceneID="LD1-kh-PM1">
@@ -309,10 +310,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.60605397579999998" green="0.48411263290000001" blue="0.94999998809999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XiV-ca-2bD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bJ-DV-aQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3504" y="-2451"/>
+            <point key="canvasLocation" x="-73" y="-1437"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mg1-kd-xxN">
@@ -438,7 +440,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHU-O4-IdB" customClass="GroupedRadioButton" customModule="Pitch_Perfect" customModuleProvider="target">
-                                <rect key="frame" x="135.5" y="477" width="50" height="30"/>
+                                <rect key="frame" x="135" y="477" width="50" height="30"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Female">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -483,6 +485,53 @@
             </objects>
             <point key="canvasLocation" x="3511.875" y="-1740.8450704225352"/>
         </scene>
+        <!--Drawer Controller-->
+        <scene sceneID="qYd-Yd-0OW">
+            <objects>
+                <viewController id="Q6i-35-iKv" customClass="KYDrawerController" customModule="KYDrawerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m6X-1B-QB5"/>
+                        <viewControllerLayoutGuide type="bottom" id="fm2-tn-MrH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RC2-9Z-Jak">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="drawerSegueIdentifier" value="drawer"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="mainSegueIdentifier" value="main"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="drawerWidth">
+                            <real key="value" value="320"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="abw-xE-N8G" kind="custom" identifier="drawer" customClass="_TtC18KYDrawerController54_TtC18KYDrawerController28KYEmbedDrawerControllerSegue" customModule="KYDrawerController" id="35G-5Q-f5w"/>
+                        <segue destination="s7c-Xf-53W" kind="custom" identifier="main" customClass="_TtC18KYDrawerController26KYEmbedMainControllerSegue" customModule="KYDrawerController" id="3OS-zI-bRC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbM-XH-kix" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1022" y="-71"/>
+        </scene>
+        <!--Drawer View Controller-->
+        <scene sceneID="Uyh-wl-RS4">
+            <objects>
+                <viewController id="s7c-Xf-53W" customClass="DrawerViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ba2-Oy-Oa7"/>
+                        <viewControllerLayoutGuide type="bottom" id="T9T-Ay-9TB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ib6-kX-QDt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="91U-9n-AGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120" y="210"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="E1r-Wl-eMr">
             <objects>
@@ -493,8 +542,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6yN-aP-Sy2">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZFm-hz-9t1"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mDc-LB-NAD"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjH-OQ-jpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -512,4 +565,7 @@
         <image name="Slow" width="90" height="90"/>
         <image name="Stop" width="155" height="155"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xva-D1-DGI"/>
+    </inferredMetricsTieBreakers>
 </document>
