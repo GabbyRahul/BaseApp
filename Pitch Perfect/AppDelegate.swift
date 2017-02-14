@@ -9,17 +9,32 @@
 import UIKit
 import KYDrawerController
 
+extension UIStoryboard {
+    class func viewController(identifier: String) -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier)
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    lazy var rootViewController: RecordSoundsViewController = {
+        return UIStoryboard.viewController(identifier: "RecordSoundsViewController") as! RecordSoundsViewController
+    }()
+    
+    lazy var leftViewController: DrawerViewController = {
+        return UIStoryboard.viewController(identifier: "DrawerViewController") as! DrawerViewController
+    }()
+
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let mainViewController   = ManualSegueViewController()
-        let drawerViewController = DrawerViewController()
+        let mainViewController   = rootViewController
+        let drawerViewController = leftViewController
         let drawerController     = KYDrawerController(drawerDirection: .left, drawerWidth: 300)
         drawerController.mainViewController = UINavigationController(
             rootViewController: mainViewController

@@ -34,7 +34,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             action: #selector(didTapOpenButton)
         )
         
-        //stopButton.isEnabled = false
+        stopButton.isEnabled = false
         self.navigationItem.title = "Pitch Perfect"
         
         // change navigationbar color
@@ -131,10 +131,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         navigationItem.title = nil
-        if segue.identifier == "manuals" {
-            segue.destination as! PlaySoundsViewController
-            
-        }
         if segue.identifier == "stopRecording" {
             let playSoundsVC = segue.destination as! PlaySoundsViewController
             let recordedAudioURL = sender as! URL

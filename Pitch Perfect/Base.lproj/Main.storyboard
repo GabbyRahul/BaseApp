@@ -13,7 +13,7 @@
         <!--RecordSoundsViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="RecordSoundsViewController" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecordSoundsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="RecordSoundsViewController" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -73,7 +73,6 @@
                         <outlet property="stopButton" destination="Orr-pD-UgA" id="CdC-sa-J1Z"/>
                         <outlet property="tapToRecord" destination="Cx1-ID-UBt" id="xTC-Bg-CNS"/>
                         <segue destination="3BX-Hd-IqW" kind="show" identifier="stopRecording" id="xva-D1-DGI"/>
-                        <segue destination="3BX-Hd-IqW" kind="show" identifier="manuals" id="Ql5-uP-GT4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -83,7 +82,7 @@
         <!--Play Sounds View Controller-->
         <scene sceneID="LD1-kh-PM1">
             <objects>
-                <viewController id="3BX-Hd-IqW" customClass="PlaySoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlaySoundsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3BX-Hd-IqW" customClass="PlaySoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cCW-4d-eHx"/>
                         <viewControllerLayoutGuide type="bottom" id="9uD-6N-i9A"/>
@@ -269,7 +268,7 @@
         <!--Slow View Controller-->
         <scene sceneID="J9d-Kq-b3m">
             <objects>
-                <viewController id="sZx-ed-uR6" customClass="SlowViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SlowViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sZx-ed-uR6" customClass="SlowViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SHM-2X-KFQ"/>
                         <viewControllerLayoutGuide type="bottom" id="pjP-LV-5Sl"/>
@@ -300,7 +299,7 @@
         <!--Manual Segue View Controller-->
         <scene sceneID="RWA-q4-Qdf">
             <objects>
-                <viewController id="ACU-eH-Dw0" customClass="ManualSegueViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ManualSegueViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ACU-eH-Dw0" customClass="ManualSegueViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Df0-7J-OvR"/>
                         <viewControllerLayoutGuide type="bottom" id="owe-ED-p15"/>
@@ -346,7 +345,7 @@
         <!--Fast View Controller-->
         <scene sceneID="FaE-s3-fAo">
             <objects>
-                <viewController id="QY8-tM-CbF" customClass="FastViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FastViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QY8-tM-CbF" customClass="FastViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MBc-Aq-hhn"/>
                         <viewControllerLayoutGuide type="bottom" id="yvV-Zz-Yzz"/>
@@ -377,7 +376,7 @@
         <!--Helo View Controller-->
         <scene sceneID="EaQ-sC-Ipe">
             <objects>
-                <viewController id="raK-fS-A9X" customClass="HeloViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HeloViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="raK-fS-A9X" customClass="HeloViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OUn-Lm-2bu"/>
                         <viewControllerLayoutGuide type="bottom" id="n8k-x9-T3I"/>
@@ -488,7 +487,7 @@
         <!--Drawer Controller-->
         <scene sceneID="qYd-Yd-0OW">
             <objects>
-                <viewController id="Q6i-35-iKv" customClass="KYDrawerController" customModule="KYDrawerController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="KYDrawerController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Q6i-35-iKv" customClass="KYDrawerController" customModule="KYDrawerController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m6X-1B-QB5"/>
                         <viewControllerLayoutGuide type="bottom" id="fm2-tn-MrH"/>
@@ -517,7 +516,7 @@
         <!--Drawer View Controller-->
         <scene sceneID="Uyh-wl-RS4">
             <objects>
-                <viewController id="s7c-Xf-53W" customClass="DrawerViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrawerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s7c-Xf-53W" customClass="DrawerViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ba2-Oy-Oa7"/>
                         <viewControllerLayoutGuide type="bottom" id="T9T-Ay-9TB"/>
@@ -565,7 +564,4 @@
         <image name="Slow" width="90" height="90"/>
         <image name="Stop" width="155" height="155"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="xva-D1-DGI"/>
-    </inferredMetricsTieBreakers>
 </document>

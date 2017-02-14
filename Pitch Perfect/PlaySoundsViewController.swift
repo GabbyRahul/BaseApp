@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class PlaySoundsViewController: UIViewController {
     
@@ -18,15 +19,23 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var echoButton: UIButton!
     @IBOutlet weak var reverbButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
-    
     var recordedAudioURL: URL!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.leftItemsSupplementBackButton = true
+
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: " Open",
+            style: UIBarButtonItemStyle.plain,
+            target: self,
+            action: #selector(didTapOpenButton)
+        )
+        
         // set navigation bar title text
             self.navigationItem.title = "Pitch Perfect"
         // change navigation bar back text
-        self.navigationController?.navigationBar.backItem?.title = "Back"
+        self.navigationController?.navigationBar.backItem?.title = ""
         
         //hides navigation bar
         //self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -35,6 +44,15 @@ class PlaySoundsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func didTapOpenButton(_ sender: UIBarButtonItem) {
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+            drawerController.setDrawerState(.opened, animated: true)
+        }
+    }
+    
+    func didTapButton(_ sender: UIBarButtonItem) {
+        _ = navigationController?.popViewController(animated: true)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

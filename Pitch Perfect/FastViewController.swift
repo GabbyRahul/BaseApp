@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class FastViewController: UIViewController {
 
@@ -15,10 +16,25 @@ class FastViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        self.navigationItem.leftItemsSupplementBackButton = true
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: " Open",
+            style: UIBarButtonItemStyle.plain,
+            target: self,
+            action: #selector(didTapOpenButton)
+        )
+        
         // set navigation bar title text
+        
+        
         self.navigationItem.title = "Pitch Perfect"
     }
-
+    func didTapOpenButton(_ sender: UIBarButtonItem) {
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+            drawerController.setDrawerState(.opened, animated: true)
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

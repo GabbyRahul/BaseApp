@@ -14,21 +14,21 @@ class ManualSegueViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.leftItemsSupplementBackButton = true
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: " Open",
+            style: UIBarButtonItemStyle.plain,
+            target: self,
+            action: #selector(didTapOpenButton)
+        )
+        
         // Do any additional setup after loading the view.
         
         self.navigationItem.title = "Pitch Perfect"
         
         // change navigationbar color
         self.navigationController?.navigationBar.barTintColor = UIColor.cyan
-        
-
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
-            title: "Open",
-            style: UIBarButtonItemStyle.plain,
-            target: self,
-            action: #selector(didTapOpenButton)
-        )
         
      //   performSegue(withIdentifier: "record", sender: nil)
 
